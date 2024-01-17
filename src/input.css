@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .i{
+        @apply w-9 h-9 rounded-full flex justify-center items-center ring ring-slate-400 hover:ring-primary hover:bg-primary text-slate-300 hover:text-white transition-all duration-300 ease-in-out;
+    }
+    .hamburger-line{
+        @apply w-[33px] h-[2px] p-[2px] my-2 bg-dark block transition-all duration-500 ease-in-out dark:bg-white;
+    }
+    .list{
+        @apply text-base py-2 mx-8 flex group-hover:text-primary dark:text-white;
+    }
+}
+
+/* navigasi fixed */
+.navbar-fixed{
+    @apply fixed z-[99999] bg-white bg-opacity-80 backdrop-blur-sm dark:bg-dark dark:bg-opacity-50;
+    box-shadow:inset 0 1px 0 0 rgba(0,0,0,.2);
+}
+
+
+/* hamburger */
+.hamburger-active > span:nth-child(1){
+    @apply rotate-45;
+}
+.hamburger-active > span:nth-child(2){
+    @apply scale-0;
+}
+.hamburger-active > span:nth-child(3){
+    @apply -rotate-45;
+}
