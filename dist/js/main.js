@@ -7,14 +7,12 @@ const mode = document.querySelector('.mode')
 
 if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
     darkToggle.checked = true
-    circleToggle.classList.toggle('translate-x-6')
     mode.innerHTML='🌕'
   } else {
    darkToggle.checked = false
    mode.innerHTML='🌤'
   }
 darkToggle.addEventListener('click',function(){
-    circleToggle.classList.toggle('translate-x-6')
     if(darkToggle.checked){
         html.classList.add('dark')
         localStorage.theme = 'dark'
@@ -61,4 +59,7 @@ window.addEventListener('click',function(e){
         navlist.classList.add('hidden')
     }
 })
+
+
+// data berhasil kirim
 
